@@ -24,6 +24,11 @@ This project implements the **COVID-19 Data Analysis** project featured on my re
 
 > 💡 **Explore the Live COVID-19 Tracker:** You can view the live interactive web application deployed directly on **GitHub Pages** (Branch: `main`, Folder: `/docs`) or open [`docs/index.html`](./docs/index.html) in your browser!
 
+### 🖥️ Interactive Web Dashboard (Sleek Modern Light Theme)
+*Interactive global epidemic surveillance dashboard featuring live country filtering, time-series moving average toggles, and high-risk zone categorization.*
+
+![Interactive Web Dashboard](./visualizations/4_sleek_light_dashboard.jpg)
+
 ---
 
 ## 📸 Epidemiological Visualizations
