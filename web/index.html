@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COVID-19 Global Data Analytics & High-Risk Zones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #070b14;
+      --card-bg: #101726;
+      --card-border: #1e293b;
+      --accent-cyan: #06b6d4;
+      --accent-red: #ef4444;
+      --accent-amber: #f59e0b;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .badge-icon {
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      color: white;
+      font-weight: 800;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 14px rgba(239, 68, 68, 0.35);
+    }
+
+    .header-text h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .header-text p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .source-badge {
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--accent-cyan);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    /* Filter Bar */
+    .filter-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .filter-item label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .filter-item select {
+      background: #1e293b;
+      color: var(--text-main);
+      border: 1px solid #334155;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-item select:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .kpi-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-2px);
+    }
+
+    .kpi-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--accent-cyan);
+    }
+
+    .kpi-card.red::before { background: var(--accent-red); }
+    .kpi-card.amber::before { background: var(--accent-amber); }
+    .kpi-card.emerald::before { background: var(--accent-emerald); }
+
+    .kpi-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      margin-bottom: 6px;
+    }
+
+    .kpi-val {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+      font-family: var(--font-mono);
+    }
+
+    .kpi-subtitle {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Chart Layout */
+    .chart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .chart-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .chart-container {
+      position: relative;
+      height: 380px;
+      width: 100%;
+    }
+
+    /* Table Section */
+    .table-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin-top: 14px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    th {
+      background: #1e293b;
+      color: var(--text-muted);
+      font-weight: 700;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--card-border);
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge-risk {
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .badge-high {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .badge-mod {
+      background: rgba(245, 158, 11, 0.15);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .badge-low {
+      background: rgba(16, 185, 129, 0.15);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    /* Insights Box */
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .insight-box {
+      background: #131d31;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .insight-box h4 {
+      font-size: 0.95rem;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+
+    .insight-box p {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    footer a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-brand">
+      <div class="badge-icon">COVID-19</div>
+      <div class="header-text">
+        <h1>Global COVID-19 Analytics & High-Risk Zones</h1>
+        <p>Epidemiological EDA & Regional Spikes Detection | Developed by Yash Chaudhary</p>
+      </div>
+    </div>
+    <div class="source-badge">
+      Data Source: Johns Hopkins University CSSE (Official)
+    </div>
+  </header>
+
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <div class="filter-item">
+      <label for="countrySelect">Select Region / Country:</label>
+      <select id="countrySelect">
+        <option value="Global">Global Cumulative Overview</option>
+        <option value="US">United States (US)</option>
+        <option value="India">India</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Japan">Japan</option>
+        <option value="Korea, South">South Korea</option>
+        <option value="Italy">Italy</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Russia">Russia</option>
+      </select>
+    </div>
+    <div style="font-size: 0.82rem; color: var(--text-muted);">
+      Tracking <strong>201 Countries & Territories</strong> | 2020 – 2023 Full Time Series
+    </div>
+  </section>
+
+  <!-- KPI Cards -->
+  <section class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-title">Total Confirmed Cases</div>
+      <div class="kpi-val" id="kpiConfirmed">676,570,149</div>
+      <div class="kpi-subtitle" id="kpiConfirmedSub">Cumulative infections recorded</div>
+    </div>
+
+    <div class="kpi-card red">
+      <div class="kpi-title">Total Fatalities</div>
+      <div class="kpi-val" id="kpiDeaths">6,881,802</div>
+      <div class="kpi-subtitle" id="kpiDeathsSub">Confirmed COVID-19 deaths</div>
+    </div>
+
+    <div class="kpi-card amber">
+      <div class="kpi-title">Case Fatality Rate (CFR)</div>
+      <div class="kpi-val" id="kpiCFR">1.02%</div>
+      <div class="kpi-subtitle">Mortality to case ratio</div>
+    </div>
+
+    <div class="kpi-card emerald">
+      <div class="kpi-title">Historical Peak Spike</div>
+      <div class="kpi-val" id="kpiPeak">1,350,000+</div>
+      <div class="kpi-subtitle" id="kpiPeakSub">Peak single-day infection surge</div>
+    </div>
+  </section>
+
+  <!-- Main Chart -->
+  <section class="chart-card">
+    <div class="chart-header">
+      <div>
+        <div class="chart-title" id="chartHeading">Daily New Infection Spikes & 7-Day Moving Average</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">
+          Visualizing epidemic wave peaks, reporting variations, and smoothed transmission curves
+        </div>
+      </div>
+    </div>
+    <div class="chart-container">
+      <canvas id="spikesChart"></canvas>
+    </div>
+  </section>
+
+  <!-- High Risk Zones Table -->
+  <section class="table-card">
+    <div class="chart-header">
+      <div>
+        <div class="chart-title">Regional Risk Categorization & Hotspot Ranking</div>
+        <div style="font-size: 0.82rem; color: var(--text-muted); margin-top: 2px;">
+          Ranked by total infection burden and classified by Case Fatality Rate (CFR %)
+        </div>
+      </div>
+    </div>
+    <div class="table-container">
+      <table id="countryTable">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Country / Territory</th>
+            <th>Confirmed Cases</th>
+            <th>Total Deaths</th>
+            <th>Case Fatality Rate (CFR)</th>
+            <th>Single-Day Peak</th>
+            <th>Peak Spike Date</th>
+            <th>Risk Category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamically populated -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Analytical Insights (Resume Bullet Highlighting) -->
+  <section class="insights-grid">
+    <div class="insight-box">
+      <h4>🔍 Regional Waves & High-Risk Zones</h4>
+      <p>
+        Identified catastrophic regional waves: <strong>India's Delta wave (May 2021)</strong> peaked at <strong>~414,000 cases/day</strong>, severely straining healthcare infrastructure. Meanwhile, the <strong>US experienced an Omicron surge (Jan 2022)</strong> exceeding <strong>1.3 million cases in a single day</strong>.
+      </p>
+    </div>
+
+    <div class="insight-box">
+      <h4>📊 Case Fatality Rate (CFR) Disparities</h4>
+      <p>
+        Observed significant divergence in healthcare outcomes: high-testing nations like <strong>South Korea (0.11%)</strong> and <strong>Japan (0.22%)</strong> maintained minimal fatality ratios, whereas nations facing healthcare saturation (e.g., <strong>Brazil at 1.89%</strong> and <strong>Peru at 4.9%</strong>) exhibited severe fatality spikes.
+      </p>
+    </div>
+
+    <div class="insight-box">
+      <h4>🔬 Smoothing Reporting Anomalies</h4>
+      <p>
+        Weekend reporting lag created artificial cyclical swings in raw data. Implemented a <strong>7-day rolling moving average (MA)</strong> algorithm to filter out reporting delays and isolate genuine epidemiological trajectory.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      Created by <strong>Yash Chaudhary</strong> | B.Tech CS & IT, G.L. Bajaj Institute of Technology & Management
+    </div>
+    <div>
+      <a href="https://github.com/YASHCHAUDHARY2212" target="_blank">GitHub Profile</a> • 
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="covid_data.js"></script>
+  <script>
+    let chartInstance = null;
+
+    function formatNumber(num) {
+      return num ? num.toLocaleString() : '0';
+    }
+
+    function renderTable() {
+      const tbody = document.querySelector('#countryTable tbody');
+      tbody.innerHTML = '';
+      COVID_DATA.summary.forEach((c, idx) => {
+        const tr = document.createElement('tr');
+        let badgeClass = 'badge-low';
+        if (c.Risk_Category === 'High Risk Zone') badgeClass = 'badge-high';
+        else if (c.Risk_Category === 'Moderate Risk Zone') badgeClass = 'badge-mod';
+
+        tr.innerHTML = `
+          <td style="color: var(--text-muted); font-family: var(--font-mono);">#${idx + 1}</td>
+          <td><strong>${c.Country}</strong></td>
+          <td style="font-family: var(--font-mono);">${formatNumber(parseInt(c.Total_Confirmed))}</td>
+          <td style="color: #f87171; font-family: var(--font-mono);">${formatNumber(parseInt(c.Total_Deaths))}</td>
+          <td style="font-family: var(--font-mono);">${parseFloat(c.CFR_Pct).toFixed(2)}%</td>
+          <td style="font-family: var(--font-mono);">${formatNumber(parseInt(c.Peak_Daily_Cases))}</td>
+          <td style="color: var(--text-muted); font-size: 0.8rem;">${c.Peak_Date}</td>
+          <td><span class="badge-risk ${badgeClass}">${c.Risk_Category}</span></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateView(countryKey) {
+      const isGlobal = countryKey === 'Global';
+      const series = COVID_DATA.time_series[countryKey] || COVID_DATA.time_series['Global'];
+
+      // Update KPIs
+      if (isGlobal) {
+        document.getElementById('kpiConfirmed').innerText = '676,570,149';
+        document.getElementById('kpiConfirmedSub').innerText = 'Global cumulative infections';
+        document.getElementById('kpiDeaths').innerText = '6,881,802';
+        document.getElementById('kpiDeathsSub').innerText = 'Total global fatalities';
+        document.getElementById('kpiCFR').innerText = '1.02%';
+        document.getElementById('kpiPeak').innerText = '1,350,000+';
+        document.getElementById('kpiPeakSub').innerText = 'Global single-day surge';
+        document.getElementById('chartHeading').innerText = 'Global Daily Infection Spikes & 7-Day Moving Average';
+      } else {
+        const match = COVID_DATA.summary.find(s => s.Country === countryKey);
+        if (match) {
+          document.getElementById('kpiConfirmed').innerText = formatNumber(parseInt(match.Total_Confirmed));
+          document.getElementById('kpiConfirmedSub').innerText = `${countryKey} Cumulative Infections`;
+          document.getElementById('kpiDeaths').innerText = formatNumber(parseInt(match.Total_Deaths));
+          document.getElementById('kpiDeathsSub').innerText = `${countryKey} Total Fatalities`;
+          document.getElementById('kpiCFR').innerText = `${parseFloat(match.CFR_Pct).toFixed(2)}%`;
+          document.getElementById('kpiPeak').innerText = formatNumber(parseInt(match.Peak_Daily_Cases));
+          document.getElementById('kpiPeakSub').innerText = `Peak recorded on ${match.Peak_Date}`;
+          document.getElementById('chartHeading').innerText = `${countryKey}: Daily Infection Spikes & 7-Day Moving Average`;
+        }
+      }
+
+      // Update Chart
+      if (chartInstance) chartInstance.destroy();
+
+      const ctx = document.getElementById('spikesChart').getContext('2d');
+      chartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: series.dates,
+          datasets: [
+            {
+              type: 'line',
+              label: '7-Day Moving Average (Smoothed Trend)',
+              data: series.cases_7d,
+              borderColor: '#06b6d4',
+              borderWidth: 2.5,
+              tension: 0.3,
+              pointRadius: 0,
+              yAxisID: 'y'
+            },
+            {
+              type: 'bar',
+              label: 'Daily Reported Cases',
+              data: series.daily_cases,
+              backgroundColor: 'rgba(239, 68, 68, 0.35)',
+              borderRadius: 2,
+              yAxisID: 'y'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          scales: {
+            x: {
+              ticks: { color: '#94a3b8', maxTicksLimit: 12 },
+              grid: { display: false }
+            },
+            y: {
+              ticks: {
+                color: '#94a3b8',
+                callback: function(v) {
+                  return v >= 1000000 ? (v / 1000000).toFixed(1) + 'M' : (v >= 1000 ? (v / 1000).toFixed(0) + 'k' : v);
+                }
+              },
+              grid: { color: '#1e293b' }
+            }
+          },
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: { color: '#f8fafc', font: { weight: '600' } }
+            }
+          }
+        }
+      });
+    }
+
+    document.getElementById('countrySelect').addEventListener('change', (e) => {
+      updateView(e.target.value);
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderTable();
+      updateView('Global');
+    });
+  </script>
+</body>
+</html>

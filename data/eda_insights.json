@@ -1,0 +1,289 @@
+{
+  "global_kpis": {
+    "total_confirmed": 676570149,
+    "total_deaths": 6881802,
+    "total_recovered": 0,
+    "global_cfr_pct": 1.02,
+    "total_countries_tracked": 201
+  },
+  "risk_zones_breakdown": {
+    "counts": {
+      "High Risk Zone": 37,
+      "Moderate Risk Zone": 82,
+      "Controlled / Low Risk Zone": 82
+    },
+    "cases_share_pct": {
+      "High Risk Zone": 82.12,
+      "Moderate Risk Zone": 16.68,
+      "Controlled / Low Risk Zone": 1.2
+    }
+  },
+  "top_10_countries": [
+    {
+      "Country": "US",
+      "Confirmed": 103802702,
+      "Deaths": 1123836,
+      "Recovered": 0,
+      "Active": 102678866,
+      "CFR_Pct": 1.08,
+      "Peak_Daily_Cases": 1354505,
+      "Peak_Date": "2022-01-10",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "India",
+      "Confirmed": 44690738,
+      "Deaths": 530779,
+      "Recovered": 0,
+      "Active": 44159959,
+      "CFR_Pct": 1.19,
+      "Peak_Daily_Cases": 414188,
+      "Peak_Date": "2021-05-06",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "France",
+      "Confirmed": 39866718,
+      "Deaths": 166176,
+      "Recovered": 0,
+      "Active": 39700542,
+      "CFR_Pct": 0.42,
+      "Peak_Daily_Cases": 503349,
+      "Peak_Date": "2022-01-25",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Germany",
+      "Confirmed": 38249060,
+      "Deaths": 168935,
+      "Recovered": 0,
+      "Active": 38080125,
+      "CFR_Pct": 0.44,
+      "Peak_Daily_Cases": 484345,
+      "Peak_Date": "2022-03-21",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Brazil",
+      "Confirmed": 37076053,
+      "Deaths": 699276,
+      "Recovered": 0,
+      "Active": 36376777,
+      "CFR_Pct": 1.89,
+      "Peak_Daily_Cases": 287149,
+      "Peak_Date": "2022-02-03",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Japan",
+      "Confirmed": 33320438,
+      "Deaths": 72997,
+      "Recovered": 0,
+      "Active": 33247441,
+      "CFR_Pct": 0.22,
+      "Peak_Daily_Cases": 260999,
+      "Peak_Date": "2022-08-19",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Korea, South",
+      "Confirmed": 30615522,
+      "Deaths": 34093,
+      "Recovered": 0,
+      "Active": 30581429,
+      "CFR_Pct": 0.11,
+      "Peak_Daily_Cases": 621317,
+      "Peak_Date": "2022-03-16",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Italy",
+      "Confirmed": 25603510,
+      "Deaths": 188322,
+      "Recovered": 0,
+      "Active": 25415188,
+      "CFR_Pct": 0.74,
+      "Peak_Daily_Cases": 229122,
+      "Peak_Date": "2022-11-25",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "United Kingdom",
+      "Confirmed": 24658705,
+      "Deaths": 220721,
+      "Recovered": 0,
+      "Active": 24437984,
+      "CFR_Pct": 0.9,
+      "Peak_Daily_Cases": 848169,
+      "Peak_Date": "2022-01-31",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Russia",
+      "Confirmed": 22075858,
+      "Deaths": 388478,
+      "Recovered": 0,
+      "Active": 21687380,
+      "CFR_Pct": 1.76,
+      "Peak_Daily_Cases": 202211,
+      "Peak_Date": "2022-02-11",
+      "Risk_Category": "High Risk Zone"
+    }
+  ],
+  "hotspot_spikes": {
+    "US": {
+      "total_cases": 103802702,
+      "total_deaths": 1123836,
+      "cfr_pct": 1.08,
+      "peak_daily_spike": 1354505,
+      "peak_date": "2022-01-10",
+      "risk_tier": "High Risk Zone"
+    },
+    "India": {
+      "total_cases": 44690738,
+      "total_deaths": 530779,
+      "cfr_pct": 1.19,
+      "peak_daily_spike": 414188,
+      "peak_date": "2021-05-06",
+      "risk_tier": "High Risk Zone"
+    },
+    "Brazil": {
+      "total_cases": 37076053,
+      "total_deaths": 699276,
+      "cfr_pct": 1.89,
+      "peak_daily_spike": 287149,
+      "peak_date": "2022-02-03",
+      "risk_tier": "High Risk Zone"
+    },
+    "United Kingdom": {
+      "total_cases": 24658705,
+      "total_deaths": 220721,
+      "cfr_pct": 0.9,
+      "peak_daily_spike": 848169,
+      "peak_date": "2022-01-31",
+      "risk_tier": "High Risk Zone"
+    },
+    "France": {
+      "total_cases": 39866718,
+      "total_deaths": 166176,
+      "cfr_pct": 0.42,
+      "peak_daily_spike": 503349,
+      "peak_date": "2022-01-25",
+      "risk_tier": "High Risk Zone"
+    }
+  },
+  "highest_mortality_nations": [
+    {
+      "Country": "Sudan",
+      "Confirmed": 63829,
+      "Deaths": 5017,
+      "Recovered": 0,
+      "Active": 58812,
+      "CFR_Pct": 7.86,
+      "Peak_Daily_Cases": 1284,
+      "Peak_Date": "2022-02-21",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Syria",
+      "Confirmed": 57467,
+      "Deaths": 3164,
+      "Recovered": 0,
+      "Active": 54303,
+      "CFR_Pct": 5.51,
+      "Peak_Daily_Cases": 905,
+      "Peak_Date": "2021-11-08",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Peru",
+      "Confirmed": 4487553,
+      "Deaths": 219539,
+      "Recovered": 0,
+      "Active": 4268014,
+      "CFR_Pct": 4.89,
+      "Peak_Daily_Cases": 67101,
+      "Peak_Date": "2022-12-26",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Egypt",
+      "Confirmed": 515759,
+      "Deaths": 24812,
+      "Recovered": 0,
+      "Active": 490947,
+      "CFR_Pct": 4.81,
+      "Peak_Daily_Cases": 5516,
+      "Peak_Date": "2022-03-21",
+      "Risk_Category": "High Risk Zone"
+    },
+    {
+      "Country": "Mexico",
+      "Confirmed": 7483444,
+      "Deaths": 333188,
+      "Recovered": 0,
+      "Active": 7150256,
+      "CFR_Pct": 4.45,
+      "Peak_Daily_Cases": 109895,
+      "Peak_Date": "2022-01-19",
+      "Risk_Category": "High Risk Zone"
+    }
+  ],
+  "lowest_mortality_nations": [
+    {
+      "Country": "Bhutan",
+      "Confirmed": 62627,
+      "Deaths": 21,
+      "Recovered": 0,
+      "Active": 62606,
+      "CFR_Pct": 0.03,
+      "Peak_Daily_Cases": 2291,
+      "Peak_Date": "2022-04-06",
+      "Risk_Category": "Controlled / Low Risk Zone"
+    },
+    {
+      "Country": "Burundi",
+      "Confirmed": 53631,
+      "Deaths": 38,
+      "Recovered": 0,
+      "Active": 53593,
+      "CFR_Pct": 0.07,
+      "Peak_Daily_Cases": 4710,
+      "Peak_Date": "2022-01-04",
+      "Risk_Category": "Controlled / Low Risk Zone"
+    },
+    {
+      "Country": "Singapore",
+      "Confirmed": 2235294,
+      "Deaths": 1722,
+      "Recovered": 0,
+      "Active": 2233572,
+      "CFR_Pct": 0.08,
+      "Peak_Daily_Cases": 39252,
+      "Peak_Date": "2022-03-09",
+      "Risk_Category": "Moderate Risk Zone"
+    },
+    {
+      "Country": "Brunei",
+      "Confirmed": 279661,
+      "Deaths": 225,
+      "Recovered": 0,
+      "Active": 279436,
+      "CFR_Pct": 0.08,
+      "Peak_Daily_Cases": 7380,
+      "Peak_Date": "2022-02-20",
+      "Risk_Category": "Controlled / Low Risk Zone"
+    },
+    {
+      "Country": "Korea, South",
+      "Confirmed": 30615522,
+      "Deaths": 34093,
+      "Recovered": 0,
+      "Active": 30581429,
+      "CFR_Pct": 0.11,
+      "Peak_Daily_Cases": 621317,
+      "Peak_Date": "2022-03-16",
+      "Risk_Category": "High Risk Zone"
+    }
+  ]
+}

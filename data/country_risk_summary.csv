@@ -1,0 +1,202 @@
+Country,Total_Confirmed,Total_Deaths,Total_Recovered,Active_Cases,CFR_Pct,Peak_Daily_Cases,Peak_Date,Risk_Category
+US,103802702,1123836,0,102678866,1.08,1354505,2022-01-10,High Risk Zone
+India,44690738,530779,0,44159959,1.19,414188,2021-05-06,High Risk Zone
+France,39866718,166176,0,39700542,0.42,503349,2022-01-25,High Risk Zone
+Germany,38249060,168935,0,38080125,0.44,484345,2022-03-21,High Risk Zone
+Brazil,37076053,699276,0,36376777,1.89,287149,2022-02-03,High Risk Zone
+Japan,33320438,72997,0,33247441,0.22,260999,2022-08-19,High Risk Zone
+"Korea, South",30615522,34093,0,30581429,0.11,621317,2022-03-16,High Risk Zone
+Italy,25603510,188322,0,25415188,0.74,229122,2022-11-25,High Risk Zone
+United Kingdom,24658705,220721,0,24437984,0.9,848169,2022-01-31,High Risk Zone
+Russia,22075858,388478,0,21687380,1.76,202211,2022-02-11,High Risk Zone
+Turkey,17042722,101492,0,16941230,0.6,823225,2020-12-10,High Risk Zone
+Spain,13770429,119479,0,13650950,0.87,372766,2022-01-03,High Risk Zone
+Vietnam,11526994,43186,0,11483808,0.37,454212,2022-03-12,High Risk Zone
+Australia,11399460,19574,0,11379886,0.17,175271,2022-01-12,High Risk Zone
+Argentina,10044957,130472,0,9914485,1.3,139853,2022-01-14,High Risk Zone
+Taiwan*,9970937,17672,0,9953265,0.18,128954,2022-05-14,High Risk Zone
+Netherlands,8712835,23705,0,8689130,0.27,380498,2022-02-07,High Risk Zone
+Iran,7572311,144933,0,7427378,1.91,50228,2021-08-17,High Risk Zone
+Mexico,7483444,333188,0,7150256,4.45,109895,2022-01-19,High Risk Zone
+Indonesia,6738225,160941,0,6577284,2.39,64718,2022-02-16,High Risk Zone
+Poland,6444960,119010,0,6325950,1.85,57659,2022-01-27,High Risk Zone
+Colombia,6359093,142339,0,6216754,2.24,35575,2022-01-15,High Risk Zone
+Austria,5961143,21970,0,5939173,0.37,64038,2022-03-17,High Risk Zone
+Ukraine,5711929,119283,0,5592646,2.09,79325,2022-10-17,High Risk Zone
+Portugal,5570473,26266,0,5544207,0.47,77281,2022-01-31,High Risk Zone
+Greece,5548487,34779,0,5513708,0.63,367629,2022-07-19,High Risk Zone
+Chile,5192286,64273,0,5128013,1.24,41651,2022-02-11,High Risk Zone
+Malaysia,5044718,36967,0,5007751,0.73,33406,2022-03-05,High Risk Zone
+China,4903524,101056,0,4802468,2.06,78859,2022-11-29,Moderate Risk Zone
+Israel,4803824,12329,0,4791495,0.26,243295,2022-01-19,Moderate Risk Zone
+Belgium,4739365,33814,0,4705551,0.71,133480,2022-01-24,Moderate Risk Zone
+Thailand,4728182,33918,0,4694264,0.72,47149,2022-04-13,Moderate Risk Zone
+Czechia,4618256,42491,0,4575765,0.92,67107,2022-02-02,Moderate Risk Zone
+Canada,4617095,51720,0,4565375,1.12,63678,2022-04-13,Moderate Risk Zone
+Peru,4487553,219539,0,4268014,4.89,67101,2022-12-26,High Risk Zone
+Switzerland,4413911,14210,0,4399701,0.32,89462,2022-01-31,Moderate Risk Zone
+Philippines,4077452,66188,0,4011264,1.62,38867,2022-01-15,Moderate Risk Zone
+South Africa,4067067,102595,0,3964472,2.52,37875,2021-12-12,Moderate Risk Zone
+Denmark,3451036,8345,0,3442691,0.24,55709,2022-02-02,Moderate Risk Zone
+Romania,3346046,67736,0,3278310,2.02,40018,2022-02-01,Moderate Risk Zone
+Sweden,2699339,23777,0,2675562,0.88,138985,2022-01-25,Moderate Risk Zone
+Slovakia,2667551,21035,0,2646516,0.79,33633,2022-09-14,Moderate Risk Zone
+Serbia,2500142,17881,0,2482261,0.72,36737,2022-01-27,Moderate Risk Zone
+Iraq,2465545,25375,0,2440170,1.03,13515,2021-07-28,Moderate Risk Zone
+New Zealand,2236114,2550,0,2233564,0.11,42699,2022-12-18,Moderate Risk Zone
+Singapore,2235294,1722,0,2233572,0.08,39252,2022-03-09,Moderate Risk Zone
+Hungary,2196804,48762,0,2148042,2.22,45047,2022-01-31,Moderate Risk Zone
+Bangladesh,2037871,29445,0,2008426,1.44,16230,2021-07-28,Moderate Risk Zone
+Georgia,1827537,16971,0,1810566,0.93,26524,2022-09-12,Moderate Risk Zone
+Jordan,1746997,14122,0,1732875,0.81,25502,2022-03-14,Moderate Risk Zone
+Ireland,1704502,8708,0,1695794,0.51,43199,2022-01-11,Moderate Risk Zone
+Pakistan,1577411,30644,0,1546767,1.94,12073,2020-06-14,Moderate Risk Zone
+Kazakhstan,1498668,19071,0,1479597,1.27,66121,2021-07-23,Moderate Risk Zone
+Norway,1479506,5213,0,1474293,0.35,26109,2022-02-08,Moderate Risk Zone
+Finland,1463644,8967,0,1454677,0.61,50889,2022-04-21,Moderate Risk Zone
+Slovenia,1331707,7078,0,1324629,0.53,23332,2022-02-02,Moderate Risk Zone
+Lithuania,1307448,9596,0,1297852,0.73,15412,2022-02-03,Moderate Risk Zone
+Bulgaria,1297523,38228,0,1259295,2.95,12399,2022-01-25,Moderate Risk Zone
+Morocco,1272490,16296,0,1256194,1.28,12039,2021-08-05,Moderate Risk Zone
+Croatia,1269326,17987,0,1251339,1.42,11812,2022-01-26,Moderate Risk Zone
+Guatemala,1238247,20182,0,1218065,1.63,9946,2022-07-29,Moderate Risk Zone
+Lebanon,1232828,10841,0,1221987,0.88,10760,2022-02-02,Moderate Risk Zone
+Costa Rica,1209725,9245,0,1200480,0.76,55406,2022-07-20,Moderate Risk Zone
+Bolivia,1194277,22365,0,1171912,1.87,23611,2022-01-16,Moderate Risk Zone
+Tunisia,1151126,29341,0,1121785,2.55,27340,2022-07-19,Moderate Risk Zone
+Cuba,1112643,8530,0,1104113,0.77,9907,2021-08-24,Moderate Risk Zone
+Ecuador,1057121,36014,0,1021107,3.41,17670,2022-02-14,Moderate Risk Zone
+United Arab Emirates,1053213,2349,0,1050864,0.22,4471,2021-06-11,Moderate Risk Zone
+Uruguay,1034303,7617,0,1026686,0.74,13612,2022-01-28,Moderate Risk Zone
+Panama,1031731,8609,0,1023122,0.83,19722,2022-01-26,Moderate Risk Zone
+Mongolia,1007900,2136,0,1005764,0.21,24556,2021-10-31,Moderate Risk Zone
+Nepal,1001154,12020,0,989134,1.2,10052,2022-01-20,Moderate Risk Zone
+Belarus,994037,7118,0,986919,0.72,11170,2022-07-05,Moderate Risk Zone
+Latvia,976255,6269,0,969986,0.64,11992,2022-02-19,Moderate Risk Zone
+Saudi Arabia,830127,9618,0,820509,1.16,5928,2022-01-19,Moderate Risk Zone
+Azerbaijan,828825,10138,0,818687,1.22,7779,2022-02-09,Moderate Risk Zone
+Paraguay,808401,19878,0,788523,2.46,59361,2022-12-03,Moderate Risk Zone
+Bahrain,710693,1553,0,709140,0.22,8173,2022-02-01,Moderate Risk Zone
+West Bank and Gaza,703228,5708,0,697520,0.81,30356,2021-10-06,Moderate Risk Zone
+Sri Lanka,672039,16830,0,655209,2.5,11366,2021-09-05,Moderate Risk Zone
+Kuwait,663860,2570,0,661290,0.39,6913,2022-01-28,Moderate Risk Zone
+Dominican Republic,660790,4384,0,656406,0.66,7439,2022-01-12,Moderate Risk Zone
+Cyprus,650685,1330,0,649355,0.2,15386,2022-07-15,Moderate Risk Zone
+Burma,633950,19490,0,614460,3.07,7083,2021-07-14,Moderate Risk Zone
+Estonia,615433,2946,0,612487,0.48,8438,2022-02-16,Moderate Risk Zone
+Moldova,611140,12003,0,599137,1.96,10147,2022-08-10,Moderate Risk Zone
+Venezuela,552162,5854,0,546308,1.06,4418,2022-01-19,Moderate Risk Zone
+Egypt,515759,24812,0,490947,4.81,5516,2022-03-21,High Risk Zone
+Libya,507187,6437,0,500750,1.27,5694,2022-01-30,Moderate Risk Zone
+Ethiopia,500116,7572,0,492544,1.51,5185,2021-12-28,Moderate Risk Zone
+Qatar,495090,688,0,494402,0.14,4206,2022-01-12,Controlled / Low Risk Zone
+Honduras,472250,11111,0,461139,2.35,12890,2022-02-16,Moderate Risk Zone
+Armenia,447308,8727,0,438581,1.95,4388,2022-02-03,Controlled / Low Risk Zone
+Bosnia and Herzegovina,401729,16280,0,385449,4.05,5254,2022-01-10,High Risk Zone
+Oman,399449,4628,0,394821,1.16,6146,2022-02-06,Controlled / Low Risk Zone
+North Macedonia,346852,9662,0,337190,2.79,2332,2022-01-25,Moderate Risk Zone
+Zambia,343135,4057,0,339078,1.18,5555,2021-12-30,Controlled / Low Risk Zone
+Kenya,342937,5688,0,337249,1.66,3749,2021-12-25,Controlled / Low Risk Zone
+Albania,334457,3598,0,330859,1.08,4789,2022-01-09,Controlled / Low Risk Zone
+Botswana,329758,2801,0,326957,0.85,41576,2022-03-30,Controlled / Low Risk Zone
+Luxembourg,317367,1220,0,316147,0.38,5497,2022-01-24,Controlled / Low Risk Zone
+Mauritius,296042,1044,0,294998,0.35,30006,2022-01-25,Controlled / Low Risk Zone
+Montenegro,288808,2808,0,286000,0.97,2960,2022-01-06,Controlled / Low Risk Zone
+Brunei,279661,225,0,279436,0.08,7380,2022-02-20,Controlled / Low Risk Zone
+Kosovo,273312,3211,0,270101,1.17,4397,2022-01-26,Controlled / Low Risk Zone
+Algeria,271496,6881,0,264615,2.53,2521,2022-01-25,Moderate Risk Zone
+Nigeria,266598,3155,0,263443,1.18,6158,2021-12-22,Controlled / Low Risk Zone
+Zimbabwe,264276,5671,0,258605,2.15,9185,2021-12-11,Moderate Risk Zone
+Uzbekistan,251247,1637,0,249610,0.65,1478,2022-01-23,Controlled / Low Risk Zone
+Mozambique,233214,2242,0,230972,0.96,4947,2021-12-30,Controlled / Low Risk Zone
+Laos,218023,758,0,217265,0.35,3915,2022-03-27,Controlled / Low Risk Zone
+Afghanistan,209451,7896,0,201555,3.77,3243,2021-06-17,Moderate Risk Zone
+Iceland,209137,263,0,208874,0.13,7408,2022-02-21,Controlled / Low Risk Zone
+Kyrgyzstan,206708,2991,0,203717,1.45,11505,2020-07-18,Controlled / Low Risk Zone
+El Salvador,201785,4230,0,197555,2.1,12677,2022-02-14,Moderate Risk Zone
+Trinidad and Tobago,189918,4355,0,185563,2.29,1259,2022-01-21,Moderate Risk Zone
+Maldives,185738,311,0,185427,0.17,2838,2022-01-30,Controlled / Low Risk Zone
+Ghana,171229,1462,0,169767,0.85,2521,2021-12-27,Controlled / Low Risk Zone
+Namibia,171156,4090,0,167066,2.39,4210,2022-05-22,Moderate Risk Zone
+Uganda,170544,3630,0,166914,2.13,21324,2021-08-23,Moderate Risk Zone
+Jamaica,154416,3514,0,150902,2.28,1968,2022-01-16,Moderate Risk Zone
+Cambodia,138719,3056,0,135663,2.2,1130,2021-06-30,Moderate Risk Zone
+Rwanda,133194,1468,0,131726,1.1,3072,2021-07-26,Controlled / Low Risk Zone
+Cameroon,124392,1965,0,122427,1.58,9668,2021-04-01,Controlled / Low Risk Zone
+Malta,117610,828,0,116782,0.7,1677,2022-03-30,Controlled / Low Risk Zone
+Barbados,106798,579,0,106219,0.54,1329,2022-01-19,Controlled / Low Risk Zone
+Angola,105288,1933,0,103355,1.84,5035,2021-12-28,Controlled / Low Risk Zone
+Congo (Kinshasa),95749,1464,0,94285,1.53,4481,2022-01-04,Controlled / Low Risk Zone
+Senegal,88926,1971,0,86955,2.22,1722,2021-07-18,Moderate Risk Zone
+Malawi,88707,2686,0,86021,3.03,1316,2021-01-22,Moderate Risk Zone
+Cote d'Ivoire,88263,834,0,87429,0.94,2858,2021-12-31,Controlled / Low Risk Zone
+Suriname,82467,1404,0,81063,1.7,1404,2022-01-17,Controlled / Low Risk Zone
+Eswatini,74267,1425,0,72842,1.92,1642,2021-12-16,Controlled / Low Risk Zone
+Guyana,73075,1298,0,71777,1.78,1186,2022-01-13,Controlled / Low Risk Zone
+Belize,70757,688,0,70069,0.97,1517,2022-02-01,Controlled / Low Risk Zone
+Fiji,68898,883,0,68015,1.28,1854,2021-07-15,Controlled / Low Risk Zone
+Madagascar,67889,1423,0,66466,2.1,2295,2021-12-25,Moderate Risk Zone
+Sudan,63829,5017,0,58812,7.86,1284,2022-02-21,High Risk Zone
+Mauritania,63668,997,0,62671,1.57,1211,2022-01-07,Controlled / Low Risk Zone
+Cabo Verde,63244,413,0,62831,0.65,1469,2022-01-07,Controlled / Low Risk Zone
+Bhutan,62627,21,0,62606,0.03,2291,2022-04-06,Controlled / Low Risk Zone
+Syria,57467,3164,0,54303,5.51,905,2021-11-08,High Risk Zone
+Burundi,53631,38,0,53593,0.07,4710,2022-01-04,Controlled / Low Risk Zone
+Seychelles,50665,172,0,50493,0.34,2068,2022-01-13,Controlled / Low Risk Zone
+Gabon,48981,306,0,48675,0.62,1871,2021-12-27,Controlled / Low Risk Zone
+Andorra,47890,165,0,47725,0.34,2313,2022-01-20,Controlled / Low Risk Zone
+Papua New Guinea,46825,670,0,46155,1.43,1543,2022-03-25,Controlled / Low Risk Zone
+Tanzania,42906,846,0,42060,1.97,24307,2021-09-23,Controlled / Low Risk Zone
+Togo,39396,290,0,39106,0.74,1002,2022-01-02,Controlled / Low Risk Zone
+Guinea,38267,467,0,37800,1.22,534,2022-01-09,Controlled / Low Risk Zone
+Bahamas,37491,833,0,36658,2.22,1497,2022-01-09,Moderate Risk Zone
+Lesotho,34790,723,0,34067,2.08,6925,2021-10-01,Moderate Risk Zone
+Haiti,34202,860,0,33342,2.51,284,2020-06-07,Moderate Risk Zone
+Mali,33062,743,0,32319,2.25,1217,2022-01-09,Moderate Risk Zone
+Saint Lucia,30004,409,0,29595,1.36,722,2022-01-22,Controlled / Low Risk Zone
+Benin,27999,163,0,27836,0.58,2566,2021-09-01,Controlled / Low Risk Zone
+Somalia,27324,1361,0,25963,4.98,1066,2022-01-24,High Risk Zone
+Congo (Brazzaville),25087,388,0,24699,1.55,1188,2022-01-03,Controlled / Low Risk Zone
+Solomon Islands,24575,153,0,24422,0.62,3063,2022-06-01,Controlled / Low Risk Zone
+Micronesia,23948,61,0,23887,0.25,3652,2022-10-03,Controlled / Low Risk Zone
+San Marino,23616,122,0,23494,0.52,491,2022-01-12,Controlled / Low Risk Zone
+Timor-Leste,23419,138,0,23281,0.59,532,2021-08-24,Controlled / Low Risk Zone
+Burkina Faso,22056,396,0,21660,1.8,1005,2022-01-04,Controlled / Low Risk Zone
+Liechtenstein,21432,89,0,21343,0.42,349,2022-03-04,Controlled / Low Risk Zone
+Grenada,19680,238,0,19442,1.21,902,2022-01-11,Controlled / Low Risk Zone
+South Sudan,18368,138,0,18230,0.75,503,2022-01-04,Controlled / Low Risk Zone
+Tajikistan,17786,125,0,17661,0.7,407,2020-05-19,Controlled / Low Risk Zone
+Equatorial Guinea,17229,183,0,17046,1.06,1750,2020-07-31,Controlled / Low Risk Zone
+Tonga,16810,13,0,16797,0.08,832,2022-03-30,Controlled / Low Risk Zone
+Samoa,16607,29,0,16578,0.17,1166,2022-04-26,Controlled / Low Risk Zone
+Monaco,16121,67,0,16054,0.42,520,2022-02-04,Controlled / Low Risk Zone
+Dominica,15760,74,0,15686,0.47,895,2022-09-27,Controlled / Low Risk Zone
+Djibouti,15690,189,0,15501,1.2,415,2021-04-06,Controlled / Low Risk Zone
+Nicaragua,15655,245,0,15410,1.56,516,2021-09-29,Controlled / Low Risk Zone
+Marshall Islands,15649,17,0,15632,0.11,3130,2022-08-24,Controlled / Low Risk Zone
+Central African Republic,15368,113,0,15255,0.74,4044,2021-08-10,Controlled / Low Risk Zone
+Gambia,12598,372,0,12226,2.95,587,2021-08-03,Moderate Risk Zone
+Vanuatu,12014,14,0,12000,0.12,616,2022-06-06,Controlled / Low Risk Zone
+Yemen,11945,2159,0,9786,18.07,287,2022-02-08,High Risk Zone
+Eritrea,10189,103,0,10086,1.01,282,2021-06-04,Controlled / Low Risk Zone
+Saint Vincent and the Grenadines,9589,123,0,9466,1.28,2723,2022-01-26,Controlled / Low Risk Zone
+Niger,9508,315,0,9193,3.31,301,2022-01-07,Moderate Risk Zone
+Antigua and Barbuda,9106,146,0,8960,1.6,468,2022-02-10,Controlled / Low Risk Zone
+Comoros,9008,161,0,8847,1.79,275,2021-12-22,Controlled / Low Risk Zone
+Guinea-Bissau,8960,176,0,8784,1.96,305,2022-09-02,Controlled / Low Risk Zone
+Liberia,8090,295,0,7795,3.65,447,2022-01-05,Moderate Risk Zone
+Sierra Leone,7760,126,0,7634,1.62,192,2021-06-24,Controlled / Low Risk Zone
+Chad,7679,194,0,7485,2.53,596,2021-12-03,Moderate Risk Zone
+Saint Kitts and Nevis,6597,47,0,6550,0.71,238,2022-01-07,Controlled / Low Risk Zone
+Sao Tome and Principe,6281,77,0,6204,1.23,319,2022-01-08,Controlled / Low Risk Zone
+Palau,5991,9,0,5982,0.15,371,2022-01-28,Controlled / Low Risk Zone
+Nauru,5247,1,0,5246,0.02,1241,2022-06-26,Controlled / Low Risk Zone
+Kiribati,5014,18,0,4996,0.36,1491,2023-01-10,Controlled / Low Risk Zone
+Tuvalu,2805,0,0,2805,0.0,793,2022-11-13,Controlled / Low Risk Zone
+Summer Olympics 2020,865,0,0,865,0.0,112,2021-08-23,Controlled / Low Risk Zone
+Diamond Princess,712,13,0,699,1.83,99,2020-02-17,Controlled / Low Risk Zone
+Winter Olympics 2022,535,0,0,535,0.0,72,2022-01-23,Controlled / Low Risk Zone
+Holy See,29,0,0,29,0.0,7,2020-10-12,Controlled / Low Risk Zone
+Antarctica,11,0,0,11,0.0,11,2021-12-14,Controlled / Low Risk Zone
+MS Zaandam,9,2,0,7,22.22,7,2020-04-01,High Risk Zone
+"Korea, North",1,6,0,0,600.0,1,2022-05-14,High Risk Zone
